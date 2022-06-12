@@ -1,0 +1,35 @@
+﻿@model IEnumerable<User>
+@{
+}
+<html>
+    <body>
+        <h3>Users
+     <td><a href="~/User/Create/">CreateUser</a></td>
+
+        </h3>
+        <table>
+            <tr>
+                <td>UserName</td>
+                <td>UserImage</td>
+                <td>Books</td>
+               
+                <td></td>
+            </tr>
+            @foreach (var user in Model)
+        {
+            <tr>
+                <td>@user.UserName</td>
+                <td>@user.Path</td>
+                <td>@user.Books</td>
+
+
+                <td><a href="~/User/Create/@user">CreateUser</a></td>
+                <td><a href="~/User/UpdateUser/@user.Id">UpdateUser</a></td>
+                <td><a href="~/User/Delete/@user.Id">DeleteUser</a></td>
+            </tr>
+
+
+        }
+        </table>
+</body>
+</html>

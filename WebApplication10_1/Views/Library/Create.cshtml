@@ -1,0 +1,34 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+<html>
+<body>
+<div>
+<h3>Оформление покупки</h3>
+    <h4>Заполните форму для покупки</h4>
+    <form method="post">
+        <input type="hidden" value="@ViewBag.Id"name="Id"/>
+    <tr>
+        <t>Название</t>
+        <td><input type="text" name="Title"/></td>
+    </tr>
+    <tr>
+        <td>Автор</td>
+        <td><input type="text" name="Author"/></td>
+    </tr>
+    <tr>
+        <td>Цена</td>
+        <td><input type="text" name="Price"/></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="submit" value="Отправить" />
+        </td>
+    </tr>
+    </form>
+    </div>
+    </body>
+    </html>

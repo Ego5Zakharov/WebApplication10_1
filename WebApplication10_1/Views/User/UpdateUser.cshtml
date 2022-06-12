@@ -1,0 +1,25 @@
+﻿@model WebApplication10_1.Models.User
+<h2>Книга № @Model.Id</h2>
+@using (Html.BeginForm("UpdateUser", "User", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Id)
+        <p>
+            @Html.LabelFor(m => m.UserName, "Имя пользователя")
+            <br />
+            @Html.EditorFor(m => m.UserName)
+        </p>
+        @*<p>
+            @Html.LabelFor(m => m.Books, "Книги")
+            <br />
+            @Html.EditorFor(m => m.Books)
+ 
+        </p>*@
+        <p>
+            @Html.LabelFor(m => m.Path, "UserImage")
+            <br />
+            @Html.EditorFor(m => m.Path)
+        </p>
+        <p><input type="submit" value="Отправить" /></p>
+    </fieldset>
+}

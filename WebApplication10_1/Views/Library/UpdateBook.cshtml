@@ -1,0 +1,25 @@
+﻿@model WebApplication10_1.Models.Book
+<h2>Книга № @Model.Id</h2>
+@using (Html.BeginForm("UpdateBook", "Library", FormMethod.Post))
+{
+    <fieldset>
+        @Html.HiddenFor(m => m.Id)
+        <p>
+            @Html.LabelFor(m => m.Title, "Название книги")
+            <br />
+            @Html.EditorFor(m => m.Title)
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Author, "Автор")
+            <br />
+            @Html.EditorFor(m => m.Author)
+ 
+        </p>
+        <p>
+            @Html.LabelFor(m => m.Price, "Цена")
+            <br />
+            @Html.EditorFor(m => m.Price)
+        </p>
+        <p><input type="submit" value="Отправить" /></p>
+    </fieldset>
+}
